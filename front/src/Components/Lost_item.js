@@ -34,7 +34,7 @@ function LostItem() {
       });
 
       axios({
-        url: "http://localhost:5000/postitem",
+        url: "https://lost-and-found-back2.onrender.com/postitem",
         method: "POST",
         data: info,
         headers: {
