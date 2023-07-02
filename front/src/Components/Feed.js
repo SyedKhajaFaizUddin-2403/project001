@@ -32,7 +32,7 @@ export default function Feed() {
   const [Found_item, setFound_item] = useState();
   useEffect(() => {
     Axios({
-      url: "http://localhost:5000/getitem",
+      url: "https://lost-and-found-back2.onrender.com/getitem",
       method: "GET",
     })
       .then((response) => {
