@@ -30,7 +30,7 @@ export default function Feed() {
   useEffect(() => {
     // console.log("Test");
     Axios({
-      url: `http://localhost:5000/mylistings/${
+      url: `https://lost-and-found-back2.onrender.com/mylistings/${
         JSON.parse(localStorage.getItem("user"))._id
       }`,
       method: "GET",
