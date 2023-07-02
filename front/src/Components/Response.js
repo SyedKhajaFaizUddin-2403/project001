@@ -14,7 +14,7 @@ function Response() {
   const handleShowNumber = (response) => {
     // console.log("Inside :", response);
     Axios({
-      url: `http://localhost:5000/getnumber/${response.belongsTo}`,
+      url: `https://lost-and-found-back2.onrender.com/getnumber/${response.belongsTo}`,
       method: "GET",
     })
       .then((response) => {
@@ -31,7 +31,7 @@ function Response() {
   const temp = [];
   useEffect(() => {
     Axios({
-      url: `http://localhost:5000/myresponses/${
+      url: `https://lost-and-found-back2.onrender.com/myresponses/${
         JSON.parse(localStorage.getItem("user"))._id
       }`,
       method: "GET",
