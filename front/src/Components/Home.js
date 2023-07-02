@@ -46,7 +46,7 @@ export default function Home() {
     };
     Axios({
       method: "POST",
-      url: "http://localhost:5000/sendmessage",
+      url: "https://lost-and-found-back2.onrender.com/sendmessage",
       data: data,
     })
       .then((res) => {
