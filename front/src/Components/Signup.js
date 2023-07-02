@@ -10,12 +10,12 @@ export default class Signup extends Component {
       info: "",
     };
   }
- 
+
   submit = () => {
     this.setState({
       info: "",
     });
-   
+
     const payload = {
       firstname: document.getElementById("firstname").value,
       lastname: document.getElementById("lastname").value,
@@ -24,22 +24,20 @@ export default class Signup extends Component {
       password: document.getElementById("password").value,
       cpassword: document.getElementById("cpassword").value,
     };
-    
+
     axios({
-      url: "http://localhost:5000/signup",
+      url: "https://lost-and-found-back2.onrender.com/signup",
       method: "POST",
       data: payload,
     })
       .then((response) => {
-       
         this.setState({
           info: response.data,
         });
- 
+
         if (response.data === "Done") {
           this.props.history.push("/log-in");
         }
-       
       })
       .catch(() => {
         console.log("Error occured");
@@ -95,7 +93,7 @@ export default class Signup extends Component {
                 }}
               />
             </div>
-       
+
             <div className="row1">
               <input
                 type="password"
@@ -129,7 +127,6 @@ export default class Signup extends Component {
             </p>
           </form>
         </div>
-      
       </>
     );
   }
