@@ -64,7 +64,7 @@ function ItemPage(props) {
     
     Axios({
       method: "POST",
-      url: `http://localhost:5000/activateItem/${item_id}`,
+      url: `https://lost-and-found-back2.onrender.com/activateItem/${item_id}`,
     })
       .then((res) => {
         console.log("Activated");
@@ -107,7 +107,7 @@ function ItemPage(props) {
   useEffect(() => {
     const { location } = props;
     Axios({
-      url: `http://localhost:5000/item/${item_id}`,
+      url: `https://lost-and-found-back2.onrender.com/item/${item_id}`,
       method: "GET",
     })
       .then((response) => {
@@ -323,7 +323,7 @@ function ItemPage(props) {
   const submitResponse = () => {
     // console.log(e.target.value)
     Axios({
-      url: `http://localhost:5000/confirmResponse/${messageId}`,
+      url: `https://lost-and-found-back2.onrender.com/confirmResponse/${messageId}`,
       method: "POST",
       data: { response: response },
     })
@@ -344,7 +344,7 @@ function ItemPage(props) {
   const delete_item = () => {
     console.log("deleted");
     Axios({
-      url: "http://localhost:5000/deleteitem",
+      url: "https://lost-and-found-back2.onrender.com/deleteitem",
       method: "POST",
       data: { item_id },
     })
@@ -384,7 +384,7 @@ function ItemPage(props) {
       });
     }
     Axios({
-      url: "http://localhost:5000/edititem",
+      url: "https://lost-and-found-back2.onrender.com/edititem",
       method: "POST",
       data: info,
     })
@@ -409,7 +409,7 @@ function ItemPage(props) {
   };
   const submitAnswer = () => {
     Axios({
-      url: "http://localhost:5000/submitAnswer",
+      url: "https://lost-and-found-back2.onrender.com/submitAnswer",
       method: "POST",
       data: {
         itemId: item_id,
